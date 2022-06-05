@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.purpleAccent,
         appBar: AppBar(
           // ignore: prefer_const_constructors
           title: Text("Learn Tigrigna"),
@@ -52,11 +52,25 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              LearnTigrignaText(),
-              SizedBox(height: 40),
-              TigrignaImage(),
-              SizedBox(height: 16),
-              LearnTigrignaStartArrow()
+              Expanded(
+                  child: Container (
+                    child: LearnTigrignaText(),
+                  ),
+              ),
+              SizedBox(height: 20),
+              Expanded(
+                flex: 2,
+                child: Container (
+                  child: TigrignaImage(),
+                ),
+              ),
+              SizedBox(height: 80),
+              Expanded(
+                flex: 2,
+                child: Container (
+                  child:  LearnTigrignaStartArrow(),
+                ),
+              ),
             ],
           ),
         )
@@ -99,7 +113,7 @@ class TigrignaImage extends StatelessWidget {
         color: Colors.red,
         image: DecorationImage(image: AssetImage("assets/images/tigrina.png")),
         border: Border.all(color: Colors.black, width:8.0),
-        borderRadius: BorderRadius.circular(200),
+        borderRadius: BorderRadius.circular(100),
       ),
     );
   }
@@ -117,7 +131,7 @@ class LearnTigrignaStartArrow extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage("assets/images/pfeil_button.jpg")),
           border: Border.all(color: Colors.black, width: 8.0),
-          borderRadius: BorderRadius.circular(200),
+          borderRadius: BorderRadius.circular(100),
         )
     );
   }

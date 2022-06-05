@@ -55,9 +55,9 @@ class _FeedbackDialogState extends State<FeedbackDialog>{
                 try {
                   final collection = FirebaseFirestore.instance.collection("feedback");
 
-                  await collection.doc().set(
-                      {
-                        "timestamp" : FieldValue.serverTimestamp(),
+                  await collection.doc().set({
+                        "timestamp" :
+                        FieldValue.serverTimestamp(),
                         "feedback" : _controller.text,
                       });
                   message = "Error when sending feedback";
@@ -66,9 +66,9 @@ class _FeedbackDialogState extends State<FeedbackDialog>{
                 }
                 ScaffoldMessenger.of(context)
                     .showSnackBar(SnackBar(content: Text(message)));
-                Navigator.pop(context);
+                    Navigator.pop(context);
               }
-            }
+            },
         )
       ],
     );
