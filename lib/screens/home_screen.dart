@@ -1,7 +1,9 @@
 
 // ignore_for_file: prefer_const_constructors
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
 
 // ignore: use_key_in_widget_constructors
 class HomeScreen extends StatelessWidget {
@@ -167,7 +169,25 @@ class _FeedbackDialogState extends State<FeedbackDialog>{
         TextButton(
             child: const Text("Send"),
             onPressed: () async{
-              // meanwhle empity
+              if(_formkey.currentState!.validate()) {
+                String message;
+
+                try {
+                  final collection = FirebaseFirestore.instance.collection("feedback");
+
+                  await collection.doc().set(
+                    {
+                      "timestamp" : FieldValue.serverTimestamp(),
+                      "feedback" : _controller.text,
+                    });
+                  message = "Error when sending feedback";
+                } catch (_) {
+                  message = "Error when sending feedback";
+                }
+                ScaffoldMessenger.of(context)
+                 .showSnackBar(SnackBar(content: Text(message)));
+                  Navigator.pop(context);
+              }
             }
         )
       ],

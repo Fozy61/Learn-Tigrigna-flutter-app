@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "583028735091",
+    "project_id": "feedback-form-a0e23",
+    "storage_bucket": "feedback-form-a0e23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583028735091:android:81797294ec9d01d31b7e06",
+        "android_client_info": {
+          "package_name": "fozycom.de.learn_tigrigna_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583028735091-v07kaj16rm7naci8qj8bcglt5ot5ulmm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxTwASld4SIfJEwdIm7lGT_xXPJ0jDnd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583028735091-v07kaj16rm7naci8qj8bcglt5ot5ulmm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "583028735091-1400n5faljvs523lc2bsu8aancsvictm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "fozycom.de.learnTigrignaApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
