@@ -3,8 +3,8 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
 import 'feedback.dart';
+import 'package:share/share.dart';
 
 
 // ignore: use_key_in_widget_constructors
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.share),
               onPressed: () {
-
+                Share.share("https://asenatv.com/");
               },
             ),
             IconButton(
