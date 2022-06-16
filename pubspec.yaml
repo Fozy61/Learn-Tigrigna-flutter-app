@@ -38,6 +38,7 @@ dependencies:
   firebase_core: ^1.17.1
   cloud_firestore: ^3.1.17
   share: ^2.0.4
+  launch_review: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,8 @@ firebase_auth: ^0.20.0+1
 cloud_firestore: ^0.16.0
 provider: ^4.3.3
 share: ^2.0.4
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

@@ -3,6 +3,8 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:launch_review/launch_review.dart';
+import 'package:learn_tigrigna_app/screens/rate_my_app.dart';
 import 'feedback.dart';
 import 'package:share/share.dart';
 
@@ -34,7 +36,11 @@ class HomeScreen extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.star),
               onPressed: () {
-
+                //showDialog(
+            //        context: context, builder: (context) => const RateMyApp());
+                    LaunchReview.launch(
+                    androidAppId: "com.example.testapp",iOSAppId: "44444457"
+                    );
               },
             ),
             IconButton(
