@@ -60,7 +60,7 @@ class _FeedbackDialogState extends State<FeedbackDialog>{
                         FieldValue.serverTimestamp(),
                         "feedback" : _controller.text,
                       });
-                  message = "Error when sending feedback";
+                  message = "sending succesful";
                 } catch (_) {
                   message = "Error when sending feedback";
                 }

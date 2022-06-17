@@ -1,10 +1,7 @@
 
-// ignore_for_file: prefer_const_constructors
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
-import 'package:learn_tigrigna_app/screens/rate_my_app.dart';
+import 'package:learn_tigrigna_app/screens/email.dart';
 import 'feedback.dart';
 import 'package:share/share.dart';
 
@@ -17,14 +14,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.purpleAccent,
         appBar: AppBar(
-          // ignore: prefer_const_constructors
-          title: Text("Learn Tigrigna"),
           // ignore: prefer_const_literals_to_create_immutables
           actions: [
             IconButton(
-              icon: Icon(Icons.info_rounded),
+              icon: Icon(Icons.email),
               onPressed: () {
-
+                Email.openEmail(
+                  toEmail: 'fozyle@gmail.com',
+                  subject: 'Hello World',
+                  body: 'This works great!',
+                );
               },
             ),
             IconButton(
@@ -36,15 +35,13 @@ class HomeScreen extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.star),
               onPressed: () {
-                //showDialog(
-            //        context: context, builder: (context) => const RateMyApp());
-                    LaunchReview.launch(
+                LaunchReview.launch(
                     androidAppId: "com.example.testapp",iOSAppId: "44444457"
-                    );
+                );
               },
             ),
             IconButton(
-              icon: Icon(Icons.contact_mail),
+              icon: Icon(Icons.feed),
               onPressed: () {
                 print("Fozy, möchstest du Feedback geben");
                 showDialog(
@@ -54,6 +51,7 @@ class HomeScreen extends StatelessWidget {
 
           ],
         ),
+
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -142,6 +140,7 @@ class LearnTigrignaStartArrow extends StatelessWidget {
     );
   }
 }
+
 
 
 
