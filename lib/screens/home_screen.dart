@@ -5,6 +5,8 @@ import 'package:learn_tigrigna_app/screens/email.dart';
 import 'feedback.dart';
 import 'package:share/share.dart';
 
+import 'firstpage_body.dart';
+
 
 // ignore: use_key_in_widget_constructors
 class HomeScreen extends StatelessWidget {
@@ -14,10 +16,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.purpleAccent,
         appBar: AppBar(
+          actionsIconTheme: IconThemeData(size: 50),
           // ignore: prefer_const_literals_to_create_immutables
           actions: [
             IconButton(
-              icon: Icon(Icons.email),
+              icon: Icon(Icons.email, size: 50),
               onPressed: () {
                 Email.openEmail(
                   toEmail: 'fozyle@gmail.com',
@@ -27,13 +30,13 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.share),
+              icon: Icon(Icons.share, size: 50),
               onPressed: () {
                 Share.share("https://asenatv.com/");
               },
             ),
             IconButton(
-              icon: Icon(Icons.star),
+              icon: Icon(Icons.star, size: 50),
               onPressed: () {
                 LaunchReview.launch(
                     androidAppId: "com.example.testapp",iOSAppId: "44444457"
@@ -41,7 +44,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.feed),
+              icon: Icon(Icons.feed, size: 50),
               onPressed: () {
                 print("Fozy, möchstest du Feedback geben");
                 showDialog(
@@ -51,8 +54,11 @@ class HomeScreen extends StatelessWidget {
 
           ],
         ),
-
-        body: Center(
+        body: StartPage(),
+      );
+    }
+  }
+        /*Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -139,8 +145,7 @@ class LearnTigrignaStartArrow extends StatelessWidget {
         )
     );
   }
-}
-
+}*/
 
 
 
