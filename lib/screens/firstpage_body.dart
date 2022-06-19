@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'main_menu.dart';
+
 class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,8 +16,8 @@ class StartPage extends StatelessWidget {
               'Learn easily Tigrina in just a few weeks\n ኣብ ሓጺር ግዜ ትግርኛ ንማሃር',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 30.0,
-                color: Colors.green,
+                fontSize: 20.0,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 //style: TextStyle(fontFamily: 'RobotoMono'),
               ),
@@ -27,13 +29,19 @@ class StartPage extends StatelessWidget {
               image: AssetImage("assets/images/tigrina.png"),
             ),
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 50),
           Expanded(
-            child: Image(
-              image: AssetImage("assets/images/pfeil_button.jpg"),
+            // ignore: deprecated_member_use
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => MainMenu(),
+                      ));
+                },
+                child: Image.asset("assets/images/pfeil_button.jpg"),
             ),
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 50),
         ],
       ),
     );
