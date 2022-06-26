@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:learn_tigrigna_app/screens/second_menu.dart';
 import 'home_page.dart';
+import 'globallyVariable.dart' as globals;
 
 class MainMenu extends StatelessWidget {
   String imageClicked = "";
@@ -14,14 +16,13 @@ class MainMenu extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
           child: GridView.count(
             crossAxisCount: 3,
-            mainAxisSpacing: 10.0,
-            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 40.0,
+            crossAxisSpacing: 20.0,
             children: [
             InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                imageClicked = "Home";
-                print(imageClicked);
+                globals.mainMenuImageKlicked = "abc";
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
               },
               child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -30,16 +31,14 @@ class MainMenu extends StatelessWidget {
                     Expanded(
                     child: Image.asset("assets/images/firstMenu/abc.png"),
                    ),
-                  //Icon(Icons.home,size: 50,color: Colors.white,),
                   Text("abc\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
                   ],),
               ),
             ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "bathroom";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -48,16 +47,15 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/bathroom.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("bathroom\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("bathroom\n ባኞ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
+                onTap: () {
+                  globals.mainMenuImageKlicked = "bedroom";
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -66,16 +64,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/bedroom.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Bedroom\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Bedroom\n መደቀሲ ክፍሊ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "body";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -84,16 +80,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/body.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Body\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Body\n ኣካላት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "food";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -102,16 +96,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/burger.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Burger\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Food\n ምግቢ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "christmas";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -120,15 +112,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/christmas.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Christmas\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Christmas\n ልደት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
+                  imageClicked = "city";
                   print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -136,18 +127,16 @@ class MainMenu extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Image.asset("assets/images/firstMenu/city.webp"),
+                        child: Image.asset("assets/images/firstMenu/city.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("City\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("City\n ከተማ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "clothes";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -156,16 +145,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/clothes.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Clothes\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Clothes\n ክዳውንቲ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "counting";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -174,16 +161,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/counting.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Counting\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Counting\n ቁጽሪ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "colors";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -192,34 +177,30 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/culors.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Colors\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Colors\n ሕብሪ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "days";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Image.asset("assets/images/firstMenu/days of the week.webp"),
+                        child: Image.asset("assets/images/firstMenu/days of the week.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Days\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Days\n ማዓልታት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "drinks";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -228,16 +209,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/drinks.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Drinks\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Drinks\n ዝስተ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "farm";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -246,16 +225,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/farm animals.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Farm Animals \n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Farm Animals \n እንስሳ ዘቤት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "fruits";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -264,16 +241,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/fruits.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Fruits\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Fruits\n ፍሩታ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "gitar";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -282,16 +257,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/gitar.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Gitar\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Music\n ሙዚቃ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "insects";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -300,16 +273,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/insects.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Insects\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Insects\n ጽንጽያ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "kitchen";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -318,16 +289,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/kitchen.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Kitchen\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Kitchen\n ክሽነ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "living";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -336,16 +305,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/living room.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Living room\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Living room\n ሳሎን",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "months";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -354,16 +321,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/months.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Months\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Months\n ኣዋርሕ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "opposit";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -372,16 +337,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/oppesit.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Oppesit\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Oppesit\n ኣንጻር",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "pits";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -390,16 +353,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/pits.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Pits\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Pአts\n አንስሳ ገዛ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "school";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -408,16 +369,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/school.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("School\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("School\n ቤት ትምህርቲ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "sciences";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -426,16 +385,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/sciences.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Science\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Science\n ሳይንስ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "shape";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -444,16 +401,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/shape.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Shape\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Shape\n ቅርጺ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "sport";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -462,16 +417,14 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/sport.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Sport\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Sport\n ስፖርት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "technology";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -480,34 +433,30 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                         child: Image.asset("assets/images/firstMenu/technology.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Technology\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Technology\n ቴክኒክ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "transport";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Image.asset("assets/images/firstMenu/transport.jpg"),
+                        child: Image.asset("assets/images/firstMenu/transport.png"),
                       ),
-                      //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Tansport\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Transport\n መጛዓዕዝያ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "vacation";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -517,15 +466,14 @@ class MainMenu extends StatelessWidget {
                         child: Image.asset("assets/images/firstMenu/vacation.png"),
                       ),
                       //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Vacation\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Vacation\n ዕረፍቲ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "vegetables";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -535,15 +483,14 @@ class MainMenu extends StatelessWidget {
                         child: Image.asset("assets/images/firstMenu/vegetables.png"),
                       ),
                       //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Vegetables\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Vegetables\n ኣሕምልቲ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "verbs";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -553,15 +500,14 @@ class MainMenu extends StatelessWidget {
                         child: Image.asset("assets/images/firstMenu/verbs.png"),
                       ),
                       //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Verbs\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Verbs\n ግስታት",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "weather";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -571,25 +517,24 @@ class MainMenu extends StatelessWidget {
                         child: Image.asset("assets/images/firstMenu/weather.png"),
                       ),
                       //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Weather\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Weather\n ኩነታት ኣየር",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
               InkWell(
                 onTap: (){
+                  globals.mainMenuImageKlicked = "wildlife";
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  imageClicked = "Home";
-                  print(imageClicked);
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Image.asset("assets/images/firstMenu/wildlife.png"),
+                        child: Image.asset("assets/images/firstMenu/wildlive.png"),
                       ),
                       //Icon(Icons.home,size: 50,color: Colors.white,),
-                      Text("Wildlife\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),)
+                      Text("Wildlive\n እንስሳ በረኻ",style: TextStyle(color: Colors.white,fontSize: 20),)
                     ],),
                 ),
               ),
