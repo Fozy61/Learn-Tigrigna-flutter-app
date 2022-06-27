@@ -9,9 +9,9 @@ class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purpleAccent,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(),
-      backgroundColor: Colors.green,
       body: Container(child: Padding(
               padding: const EdgeInsets.all(10.0),
           child: GridView.count(
@@ -55,7 +55,7 @@ class MainMenu extends StatelessWidget {
                 onTap: () {
                   globals.mainMenuImageKlicked = "bedroom";
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => SecondMenu()));
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -71,7 +71,7 @@ class MainMenu extends StatelessWidget {
               InkWell(
                 onTap: (){
                   globals.mainMenuImageKlicked = "body";
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -87,7 +87,7 @@ class MainMenu extends StatelessWidget {
               InkWell(
                 onTap: (){
                   globals.mainMenuImageKlicked = "food";
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -103,7 +103,7 @@ class MainMenu extends StatelessWidget {
               InkWell(
                 onTap: (){
                   globals.mainMenuImageKlicked = "christmas";
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
                 },
                 child: Container(decoration: BoxDecoration(color: Colors.green, border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(
@@ -118,7 +118,7 @@ class MainMenu extends StatelessWidget {
               ),
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
                   imageClicked = "city";
                   print(imageClicked);
                 },
