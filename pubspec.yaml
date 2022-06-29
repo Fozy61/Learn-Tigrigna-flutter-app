@@ -76,6 +76,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/firstMenu/
+    - assets/images/food/
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
