@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'food_memory.dart';
 import 'globallyVariable.dart' as globals;
@@ -42,7 +43,7 @@ class _SecondMenuState extends State<SecondMenu> {
                       ),
                       icon: Icon(Icons.local_library, size: 30),
                       label: Text("     Vocabulary    መዝገበ ቃላት"),
-                      onPressed: () {
+                      onPressed: () async {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>FoodVocabulary()));
                       },
                     ),

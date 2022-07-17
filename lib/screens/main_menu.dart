@@ -17,23 +17,9 @@ class MainMenu extends StatelessWidget {
             mainAxisSpacing: 40.0,
             crossAxisSpacing: 20.0,
             children: [
-            InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                          child: Image.asset("assets/images/firstMenu/abc.png")),
-                      Expanded(child: Text("abc\n ፊደል",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                    ],),
-              ),
-            ),
               InkWell(
                 onTap: (){
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
                 },
                 child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                   child: Column(

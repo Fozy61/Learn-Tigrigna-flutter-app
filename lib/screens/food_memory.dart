@@ -1,7 +1,60 @@
 
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/cupertino.dart';
 
-class FoodVocabulary extends StatelessWidget {
+
+//import 'package:flutter/material.dart';
+
+
+//class FoodVocabulary extends StatelessWidget {
+
+class FoodVocabulary extends StatefulWidget {
+  const FoodVocabulary({Key? key}) : super(key: key);
+
+  @override
+  @override
+  State<FoodVocabulary> createState() => _FoodVocabulary();
+}
+
+class _FoodVocabulary extends State<FoodVocabulary> {
+  AudioPlayer audioPlayer = AudioPlayer();
+  AudioPlayerState audioPlayerState = AudioPlayerState.PAUSED;
+  late AudioCache audioCache;
+
+
+  @override
+  void initState() {
+    super.initState();
+    audioCache = AudioCache(fixedPlayer: audioPlayer);
+    audioPlayer.onPlayerStateChanged.listen((AudioPlayerState s) {
+      setState(() {
+        audioPlayerState = s;
+      });
+    });
+  }
+
+  @override
+  void dispose () {
+    super.dispose();
+    audioPlayer.release();
+    audioPlayer.dispose();
+    audioCache.clearCache();
+  }
+
+  playFoodName(int number) async {
+    await audioCache.play("food$number.mp3");
+    print("PlayMusic called");
+  }
+
+  stopFoodName() async{
+    await audioPlayer.stop();
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +70,14 @@ class FoodVocabulary extends StatelessWidget {
           children: [
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(1);
+                  print("if brunch called");
+                } else {
+                  playFoodName(1);
+                  print("else bruch called");
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -31,23 +91,13 @@ class FoodVocabulary extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: (){
-
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/burger.png"),
-                    ),
-                    Expanded(child: Text("Burger",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
-                  ],),
-              ),
-            ),
-            InkWell(
               onTap: () {
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(2);
+                } else {
+                  playFoodName(2);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -62,7 +112,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(3);
+                } else {
+                  playFoodName(3);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -77,7 +132,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(4);
+                } else {
+                  playFoodName(4);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -92,7 +152,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(5);
+                } else {
+                playFoodName(5);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -107,7 +172,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(6);
+                } else {
+                playFoodName(6);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -122,7 +192,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(7);
+                } else {
+                playFoodName(7);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -137,7 +212,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(8);
+                } else {
+                playFoodName(8);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -152,7 +232,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(9);
+                } else {
+                playFoodName(9);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -167,7 +252,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(10);
+                } else {
+                playFoodName(10);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -182,7 +272,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(11);
+                } else {
+                playFoodName(11);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -197,7 +292,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(12);
+                } else {
+                playFoodName(12);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -212,7 +312,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(13);
+                } else {
+                  playFoodName(13);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -227,7 +332,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(14);
+                } else {
+                  playFoodName(14);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -242,7 +352,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(15);
+                } else {
+                  playFoodName(15);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -257,7 +372,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(16);
+                } else {
+                  playFoodName(16);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -272,7 +392,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(17);
+                } else {
+                  playFoodName(17);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -287,7 +412,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(18);
+                } else {
+                  playFoodName(18);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -302,7 +432,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(19);
+                } else {
+                  playFoodName(19);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -317,7 +452,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(20);
+                } else {
+                  playFoodName(20);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -332,7 +472,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(21);
+                } else {
+                  playFoodName(21);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -347,7 +492,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(22);
+                } else {
+                  playFoodName(22);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -362,7 +512,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(23);
+                } else {
+                  playFoodName(23);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -377,7 +532,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(24);
+                } else {
+                  playFoodName(24);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -392,7 +552,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(25);
+                } else {
+                  playFoodName(25);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -407,7 +572,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(26);
+                } else {
+                  playFoodName(26);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -422,7 +592,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(27);
+                } else {
+                  playFoodName(27);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -437,7 +612,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(28);
+                } else {
+                  playFoodName(28);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
@@ -453,7 +633,12 @@ class FoodVocabulary extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-
+                if (audioPlayerState == AudioPlayerState.PLAYING) {
+                  stopFoodName();
+                  playFoodName(29);
+                } else {
+                  playFoodName(29);
+                }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
                 child: Column(
