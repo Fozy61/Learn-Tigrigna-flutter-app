@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'food_listiening.dart';
 import 'food_memory.dart';
 import 'globallyVariable.dart' as globals;
 
@@ -61,26 +62,8 @@ class _SecondMenuState extends State<SecondMenu> {
               ),
               icon: Icon(Icons.hearing, size: 30),
               label: Text("     Listening    ምስማዕ"),
-              onPressed: () {
-
-              },
-            ),
-          ),
-          const SizedBox(height: 15),
-          Center(
-            child: ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                alignment: Alignment(-0.8, 0),
-                onPrimary: Colors.white,
-                primary: Colors.blue,
-                minimumSize: Size(250, 60),
-                side: BorderSide(color: Colors.white, width: 8),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              ),
-              icon: Icon(Icons.local_library, size: 30),
-              label: Text("     Reading    ምንባብ"),
-              onPressed: () {
-
+              onPressed: () async{
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FoodListening()));
               },
             ),
           ),
@@ -117,6 +100,24 @@ class _SecondMenuState extends State<SecondMenu> {
               icon: Icon(Icons.local_library, size: 30),
               label: Text("     Writing    ምጽሓፍ"
               ),
+              onPressed: () {
+
+              },
+            ),
+          ),
+          const SizedBox(height: 15),
+          Center(
+            child: ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                alignment: Alignment(-0.8, 0),
+                onPrimary: Colors.white,
+                primary: Colors.blue,
+                minimumSize: Size(250, 60),
+                side: BorderSide(color: Colors.white, width: 8),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              ),
+              icon: Icon(Icons.local_library, size: 30),
+              label: Text("     Reading    ምንባብ"),
               onPressed: () {
 
               },
