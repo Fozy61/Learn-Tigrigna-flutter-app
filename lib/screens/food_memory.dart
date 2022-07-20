@@ -5,11 +5,6 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 
 
-//import 'package:flutter/material.dart';
-
-
-//class FoodVocabulary extends StatelessWidget {
-
 class FoodVocabulary extends StatefulWidget {
   const FoodVocabulary({Key? key}) : super(key: key);
 
