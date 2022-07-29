@@ -1,12 +1,15 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+late  int number;
+
 class FoodListening extends StatefulWidget {
   const FoodListening({Key? key}) : super(key: key);
 
-  @override
   @override
   State<FoodListening> createState() => _FoodListening();
 }
@@ -19,6 +22,7 @@ class _FoodListening extends State<FoodListening> {
 
   @override
   void initState() {
+    number = Random().nextInt(29) + 1;
     super.initState();
     audioCache = AudioCache(fixedPlayer: audioPlayer);
     audioPlayer.onPlayerStateChanged.listen((AudioPlayerState s) {
@@ -26,6 +30,7 @@ class _FoodListening extends State<FoodListening> {
         audioPlayerState = s;
       });
     });
+    playFoodName(number);
   }
 
   @override
@@ -39,6 +44,8 @@ class _FoodListening extends State<FoodListening> {
   playFoodName(int number) async {
     await audioCache.play("food$number.mp3");
     print("PlayMusic called");
+    print("This is $number in playFoodName");
+    print("FozyEst");
   }
 
   stopFoodName() async{
@@ -82,7 +89,7 @@ class _FoodListening extends State<FoodListening> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Image.asset("assets/images/food/bread.png"),
+                          child: Image.asset("assets/images/food/imgfood$number.png"),
                         ),
                         Expanded(child: Text("Bread",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
                       ],),
@@ -102,7 +109,7 @@ class _FoodListening extends State<FoodListening> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Image.asset("assets/images/food/butter.png"),
+                          child: Image.asset("assets/images/food/imgfood18.png"),
                         ),
                         Expanded(child: Text("Butter",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                       ],),
@@ -122,7 +129,7 @@ class _FoodListening extends State<FoodListening> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Image.asset("assets/images/food/cheese.png"),
+                          child: Image.asset("assets/images/food/imgfood20.png"),
                         ),
                         Expanded(child: Text("Cheese",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                       ],),
@@ -144,7 +151,7 @@ class _FoodListening extends State<FoodListening> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Image.asset("assets/images/food/bread.png"),
+                          child: Image.asset("assets/images/food/imgfood11.png"),
                         ),
                         Expanded(child: Text("Bread",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
                       ],),
@@ -158,8 +165,3 @@ class _FoodListening extends State<FoodListening> {
     );
   }
 }
-/*Column(
-        children: [
-
-        ]
-      )*/
