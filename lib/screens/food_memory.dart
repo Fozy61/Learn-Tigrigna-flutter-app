@@ -39,17 +39,12 @@ class _FoodVocabulary extends State<FoodVocabulary> {
   }
 
   playFoodName(int number) async {
-    await audioCache.play("food$number.mp3");
-    print("This is $number in playFoodName");
-    print("FozyEst");
+    await audioCache.play("audio$number.mp3");
   }
 
   stopFoodName() async{
     await audioPlayer.stop();
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -68,11 +63,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(1);
-                  print("if brunch called");
+                  playFoodName(101);
                 } else {
-                  playFoodName(1);
-                  print("else bruch called");
+                  playFoodName(101);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -80,7 +73,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/bread.png"),
+                      child: Image.asset("assets/images/image101.png"),
                     ),
                     Expanded(child: Text("Bread",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
                   ],),
@@ -90,9 +83,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: () {
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(2);
+                  playFoodName(102);
                 } else {
-                  playFoodName(2);
+                  playFoodName(102);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -100,7 +93,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/butter.png"),
+                      child: Image.asset("assets/images/image102.png"),
                     ),
                     Expanded(child: Text("Butter",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -110,9 +103,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(3);
+                  playFoodName(103);
                 } else {
-                  playFoodName(3);
+                  playFoodName(103);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -120,7 +113,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/cheese.png"),
+                      child: Image.asset("assets/images/image103.png"),
                     ),
                     Expanded(child: Text("Cheese",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -130,9 +123,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(4);
+                  playFoodName(104);
                 } else {
-                  playFoodName(4);
+                  playFoodName(104);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -140,7 +133,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/chicken.png"),
+                      child: Image.asset("assets/images/image104.png"),
                     ),
                     Expanded(child: Text("Chicken",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -150,9 +143,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(5);
+                  playFoodName(105);
                 } else {
-                playFoodName(5);
+                playFoodName(105);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -160,7 +153,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/egg.png"),
+                      child: Image.asset("assets/images/image105.png"),
                     ),
                     Expanded(child: Text("Egg",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -170,9 +163,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(6);
+                  playFoodName(106);
                 } else {
-                playFoodName(6);
+                playFoodName(106);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -180,7 +173,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/fish.png"),
+                      child: Image.asset("assets/images/image106.png"),
                     ),
                     Expanded(child: Text("Fish",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -190,9 +183,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(7);
+                  playFoodName(107);
                 } else {
-                playFoodName(7);
+                playFoodName(107);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -200,7 +193,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/geat2.png"),
+                      child: Image.asset("assets/images/image107.png"),
                     ),
                     //Expanded(child: Text("Geat",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -210,9 +203,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(8);
+                  playFoodName(108);
                 } else {
-                playFoodName(8);
+                playFoodName(108);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -220,7 +213,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/hamli.png"),
+                      child: Image.asset("assets/images/image108.png"),
                     ),
                     //Expanded(child: Text("Hamli",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -230,9 +223,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(9);
+                  playFoodName(109);
                 } else {
-                playFoodName(9);
+                playFoodName(109);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -240,7 +233,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/kolo.png"),
+                      child: Image.asset("assets/images/image109.png"),
                     ),
                     //Expanded(child: Text("Kolo",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -250,9 +243,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(10);
+                  playFoodName(110);
                 } else {
-                playFoodName(10);
+                playFoodName(110);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -260,7 +253,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/himbasha.png"),
+                      child: Image.asset("assets/images/image110.png"),
                     ),
                     //Expanded(child: Text("Himbasha\n ሕብሪ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -270,9 +263,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(11);
+                  playFoodName(111);
                 } else {
-                playFoodName(11);
+                playFoodName(111);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -280,7 +273,7 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/salt.png"),
+                      child: Image.asset("assets/images/image111.png"),
                     ),
                     Expanded(child: Text("Salt",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                   ],),
@@ -290,9 +283,9 @@ class _FoodVocabulary extends State<FoodVocabulary> {
               onTap: (){
                 if (audioPlayerState == AudioPlayerState.PLAYING) {
                   stopFoodName();
-                  playFoodName(12);
+                  playFoodName(112);
                 } else {
-                playFoodName(12);
+                playFoodName(112);
                 }
               },
               child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -300,353 +293,356 @@ class _FoodVocabulary extends State<FoodVocabulary> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset("assets/images/food/injera.png"),
+                      child: Image.asset(("assets/images/image112.png"),
                     ),
                     //Text("Drinks\n ዝስተ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
+                    )
+                  ],
+                ),
+                 ),
               ),
+            InkWell(
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(113);
+            } else {
+            playFoodName(113);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset(("assets/images/image113.png"),
+            ),
+            //Text("Farm Animals \n እንስሳ ዘቤት",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
+            )
+              ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(13);
-                } else {
-                  playFoodName(13);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/kicha.png"),
-                    ),
-                    //Text("Farm Animals \n እንስሳ ዘቤት",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(114);
+            } else {
+            playFoodName(114);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image114.png"),
+            ),
+            //Text("Fruits\n ፍሩታ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(14);
-                } else {
-                  playFoodName(14);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/kursibun.png"),
-                    ),
-                    //Text("Fruits\n ፍሩታ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(115);
+            } else {
+            playFoodName(115);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image115.png"),
+            ),
+            Expanded(child: Text("Lentil",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(15);
-                } else {
-                  playFoodName(15);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/lentil.png"),
-                    ),
-                    Expanded(child: Text("Lentil",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(116);
+            } else {
+            playFoodName(116);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image116.png"),
+            ),
+            Expanded(child: Text("Meat",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(16);
-                } else {
-                  playFoodName(16);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/meat.png"),
-                    ),
-                    Expanded(child: Text("Meat",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(117);
+            } else {
+            playFoodName(117);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image117.png"),
+            ),
+            Expanded(child: Text("Oil",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(17);
-                } else {
-                  playFoodName(17);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/oil.png"),
-                    ),
-                    Expanded(child: Text("Oil",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(118);
+            } else {
+            playFoodName(118);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image118.png"),
+            ),
+            Expanded(child: Text("Pasta",style: TextStyle(color: Colors.white,fontSize: 20),))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(18);
-                } else {
-                  playFoodName(18);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/pasta.png"),
-                    ),
-                    Expanded(child: Text("Pasta",style: TextStyle(color: Colors.white,fontSize: 20),))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(119);
+            } else {
+            playFoodName(119);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image119.png"),
+            ),
+            Expanded(child: Text("Pepper",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(19);
-                } else {
-                  playFoodName(19);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/pepper.png"),
-                    ),
-                    Expanded(child: Text("Pepper",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(120);
+            } else {
+            playFoodName(120);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image120.png"),
+            ),
+              Expanded(child: Text("Popcorn",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(20);
-                } else {
-                  playFoodName(20);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/shiro.png"),
-                    ),
-                    //Text("Oppesit\n ኣንጻር",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(121);
+            } else {
+            playFoodName(121);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image121.png"),
+            ),
+            Expanded(child: Text("Rice",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(21);
-                } else {
-                  playFoodName(21);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/popcorn.png"),
-                    ),
-                    Expanded(child: Text("Popcorn",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(122);
+            } else {
+            playFoodName(122);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image122.png"),
+            ),
+            Expanded(child: Text("Salat",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(22);
-                } else {
-                  playFoodName(22);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/rice.png"),
-                    ),
-                    Expanded(child: Text("Rice",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(123);
+            } else {
+            playFoodName(123);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image123.png"),
+            ),
+            Expanded(child: Text("Salt",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(23);
-                } else {
-                  playFoodName(23);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/salad.png"),
-                    ),
-                    Expanded(child: Text("Salad",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)),
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(124);
+            } else {
+            playFoodName(124);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image124.png"),
+            ),
+            //Text("Shape\n ቅርጺ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(24);
-                } else {
-                  playFoodName(24);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/kicha fit fit.png"),
-                    ),
-                    //Text("Shape\n ቅርጺ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(125);
+            } else {
+            playFoodName(125);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image125.png"),
+            ),
+            Expanded(child: Text("Soup",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(25);
-                } else {
-                  playFoodName(25);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/soup2.png"),
-                    ),
-                    Expanded(child: Text("Soup",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(126);
+            } else {
+            playFoodName(126);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image126.png"),
+            ),
+            Expanded(child: Text("Spices",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(26);
-                } else {
-                  playFoodName(26);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/spices.png"),
-                    ),
-                    Expanded(child: Text("Spices",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(127);
+            } else {
+            playFoodName(127);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image127.png"),
+            ),
+            Expanded(child: Text("Sugar",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(27);
-                } else {
-                  playFoodName(27);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/sugar.png"),
-                    ),
-                    Expanded(child: Text("Sugar",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(128);
+            } else {
+            playFoodName(128);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image128.png"),
+            ),
+            //Icon(Icons.home,size: 50,color: Colors.white,),
+            //Text("Vacation\n ዕረፍቲ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
+            ],),
+            ),
             ),
             InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(28);
-                } else {
-                  playFoodName(28);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/tsebhi.png"),
-                    ),
-                    //Icon(Icons.home,size: 50,color: Colors.white,),
-                    //Text("Vacation\n ዕረፍቲ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center)
-                  ],),
-              ),
+            onTap: (){
+            if (audioPlayerState == AudioPlayerState.PLAYING) {
+            stopFoodName();
+            playFoodName(129);
+            } else {
+            playFoodName(129);
+            }
+            },
+            child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Expanded(
+            child: Image.asset("assets/images/image129.png"),
             ),
-            InkWell(
-              onTap: (){
-                if (audioPlayerState == AudioPlayerState.PLAYING) {
-                  stopFoodName();
-                  playFoodName(29);
-                } else {
-                  playFoodName(29);
-                }
-              },
-              child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset("assets/images/food/vinegar.png"),
-                    ),
-                    //Icon(Icons.home,size: 50,color: Colors.white,),
-                    Expanded(child: Text("Vinegar",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                  ],),
-              ),
+            //Icon(Icons.home,size: 50,color: Colors.white,),
+            Expanded(child: Text("Vinegar",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+            ],),
+            ),
             ),
           ],
         ),

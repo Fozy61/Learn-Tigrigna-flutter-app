@@ -21,17 +21,7 @@ class _SecondMenuState extends State<SecondMenu> {
       ),
       body: ListView(
         children: [
-          Center(
-            child: Container(
-              margin: EdgeInsets.only(top: 30),
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
-              color: Colors.yellow,
-              child: Image.asset("assets/images/firstMenu/abc.png"),
-            ),
-          ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 100),
           Center(
             child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(

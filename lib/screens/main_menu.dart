@@ -64,21 +64,6 @@ class MainMenu extends StatelessWidget {
               ),
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
-                },
-                child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Image.asset("assets/images/firstMenu/burger.png"),
-                      ),
-                      Expanded(child: Text("Food\n ምግቢ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
-                    ],),
-                ),
-              ),
-              InkWell(
-                onTap: (){
                
                 },
                 child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
@@ -197,6 +182,21 @@ class MainMenu extends StatelessWidget {
                       Expanded(
                           flex: 2,
                           child: Text("Farm Animals \n እንስሳ ዘቤት",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
+                    ],),
+                ),
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondMenu()));
+                },
+                child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 8.0), borderRadius: BorderRadius.circular(20),),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Image.asset("assets/images/firstMenu/burger.png"),
+                      ),
+                      Expanded(child: Text("Food\n ምግቢ",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.center))
                     ],),
                 ),
               ),
